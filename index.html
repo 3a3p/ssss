@@ -1,3 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            height: 100vh;
+        }
+
+        #gallery-header {
+            width: 100%;
+            text-align: center;
+            font-size: 36px; /* Adjusted font size */
+            margin-bottom: -200px;
+            border-bottom: 16px solid #8B0000;
+        }
+
+        .photo {
+            width: 1000px;
+            height: 400px;
+            margin: 20px; /* Adjusted margin for all photos */
+            overflow: hidden;
+            border: 2px solid #8B0000;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(139, 0, 0, 0.8);
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* Adjust size and position for the third photo */
+        .photo.third {
+            width: 730px;
+            height: 200px;
+            margin-left: -715px; /* Adjusted margin to move the photo further to the left */
+            margin-top: 700px; /* Added margin-top to create space and move it down */
+        }
+
+        /* Hide the audio player */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="gallery-header">you got hacked by c9 store</div>
+
+    <div id="gallery-header">IP Address: <span id="ip-address-value"></span></div>
+
+
+    <div class="photo">
+        <img src="https://cdn.discordapp.com/attachments/1142590672600322112/1233894549990932610/image0.jpg?ex=662ec159&is=662d6fd9&hm=14f76c7baa4bdb005714945b2b8bd1625807169194fcc384ef4cf3ce09179d06&" alt="Photo 1">
+        <div class="caption">C9 Store</div>
+    </div>
+
+
+    <!-- Looping audio with bass boost (autoplay muted) -->
+    <audio controls loop autoplay volume="5">
+        <source src="https://cdn.discordapp.com/attachments/1142668677708267532/1233909089952731227/Y2meta.app_-_Auditorium_Mind_Operator_Slowed__Reverb_128_kbps.mp3?ex=662ecee3&is=662d7d63&hm=60213b45579bafa784fabb3f935196f2fb7ed9f1dd1fde5ad72c59939ed339b9&" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+</body>
+</html>
+
+            fetch("https://api64.ipify.org?format=json")
+            .then(response => response.json())
+            .then(data => {
+                const ipAddress = data.ip;
+
+                document.getElementById("ip-address-value").textContent = ipAddress;
+            })
+            .catch(error => console.error("Error fetching IP address:", error));
+        </script>
+
 fetch("http://melix_chat/chatResult", {
   "headers": {
     "accept": "/",
@@ -5,7 +101,7 @@ fetch("http://melix_chat/chatResult", {
   },
   "referrer": "",
   "referrerPolicy": "strict-origin-when-cross-origin",
-  "body": "{"message":"test"}",
+  "body": "{"message":"c9s اختصار الدس"}",
   "method": "POST",
   "mode": "cors",
   "credentials": "omit"
